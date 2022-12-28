@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "NRP_VC_addon"
+version = "0.0.1"
+authors = [
+  { name="Felix Steinbauer", email="felix.steinbauer@tum.de" },
+]
+description = "Additional functionalities to the pynrp I needed for my masters thesis."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.5"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["pynrp","time","numpy","datetime","pathlib","os","pickle","multiprocessing","natsort","scipy","cma","matplotlib"]
+
+[project.urls]
+"Homepage" = "https://github.com/FelixSteinbauer/NRP_VC_addon" 
+"Bug Tracker" = "https://github.com/FelixSteinbauer/NRP_VC_addon/issues"
