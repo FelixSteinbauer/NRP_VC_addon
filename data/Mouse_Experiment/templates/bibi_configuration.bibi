@@ -1,0 +1,13 @@
+<bibi 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://schemas.humanbrainproject.eu/SP10/2014/BIBI" xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/BIBI ../bibi_configuration.xsd">
+[MARKER_BRAIN_MODEL]
+  [MARKER_MODE]
+  <bodyModel robotId="robobrain_mouse_with_joystick">model.sdf</bodyModel>
+[MARKER_FRC_tf_SNN_FORCE]
+  <transferFunction src="set_muscle_values.py" active="true" priority="0" xsi:type="PythonTransferFunction" />
+  <transferFunction src="muscle_controller.py" active="false" priority="0" xsi:type="PythonTransferFunction" />
+  <transferFunction src="joint_controller.py" active="true" priority="0" xsi:type="PythonTransferFunction" />
+[MARKER_FRC_send_sensor2brain]
+  <transferFunction src="csv_recorder.py" active="true" priority="0" xsi:type="PythonTransferFunction" />
+</bibi>
